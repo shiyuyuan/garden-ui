@@ -8,13 +8,13 @@ import App from './App.vue'
 // Vue.use(Card)
 // Vue.use(Alert)
 //本地全部引入
-// import '../components/css/index.scss'
-// import GardenUI from '../components/lib/index'
-// Vue.use(GardenUI)
-//线上全部引入
-import "garden-ui/dist/css/index.css";
-import GardenUI from 'garden-ui'
+import '../components/css/index.scss'
+import GardenUI from '../components/lib/index'
 Vue.use(GardenUI)
+//线上全部引入
+// import "garden-ui/dist/css/index.css";
+// import GardenUI from 'garden-ui'
+// Vue.use(GardenUI)
 //按需引入
 // import "garden-ui/dist/css/card.css";
 // import "garden-ui/dist/css/alert.css";
