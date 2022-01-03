@@ -26,11 +26,16 @@ export default {
   created() {
     this.$on("item-click", item => {
       let index = this.activeNames.indexOf(item.name);
+      // 是手风琴
+      if(this.accordion){
+        this.activeNames = []
+      }
       if (index > -1) {
         this.activeNames.splice(index, 1);
       } else {
         this.activeNames.push(item.name);
       }
+
     });
   },
   provide() {

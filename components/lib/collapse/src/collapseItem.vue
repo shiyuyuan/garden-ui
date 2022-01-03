@@ -1,11 +1,15 @@
 <template>
-  <div class="gd-collapse-item">
-    <div class="gd-collapse-header" @click="headerClick">
-      <h4>{{title}}</h4>
+  <div class="gd-collapse-item" :class="{'is-active':isActive}">
+    <div class="gd-collapse-item_header" @click="headerClick" :class="{'is-active':isActive }">
+      <slot name="title">{{title}}</slot>
+      <i class="gd-icon_updown" :class="{'is-active':isActive}"></i>
     </div>
-    <div class="el-collapse-item__wrap" v-show="isActive">
-      <slot></slot>
-    </div>
+    <transition name="fade">    
+      <div class="gd-collapse-item_wrap" v-show="isActive">
+        <div class="gd-collapse-item_content"> <slot></slot>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 <script>
@@ -25,7 +29,6 @@ export default {
   computed: {
     isActive() {
       //   return this.$parent.value.indexOf(this.name) > -1;
-
       return this.collapse.activeNames.indexOf(this.name) > -1;
     }
   },
