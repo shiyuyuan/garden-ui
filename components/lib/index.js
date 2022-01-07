@@ -5,6 +5,7 @@ import CollapseItem from './collapseItem'
 import Tab from './tab'
 import Tree from './tree'
 import Pagination from './pagination'
+import EchartUI from './echartUI'
 const components = {
 	Alert,
 	Card,
@@ -12,7 +13,8 @@ const components = {
 	CollapseItem,
 	Tab,
 	Tree,
-	Pagination
+	Pagination,
+	EchartUI
 }
 const install = function (Vue) {
 	// 避免重複安裝

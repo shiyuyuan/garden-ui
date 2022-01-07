@@ -48,7 +48,8 @@ export default {
       next: <Next />,
       jumper: <Jumper />,
       sizes: <Sizes />,
-      total: <Total />
+      total: <Total />,
+      slot: <my-slot />
     };
     tempalte.children = tempalte.children || [];
     let components = layout.split(",").map(item => item.trim());
@@ -58,6 +59,14 @@ export default {
     return tempalte;
   },
   components: {
+    MySlot: {
+      render(h) {
+        console.log(this.$parent.$slots);
+        return this.$parent.$slots.default
+          ? this.$parent.$slots.default[0]
+          : "";
+      }
+    },
     Total: {
       render() {
         return <span>共{this.$parent.total}条</span>;

@@ -13,10 +13,12 @@
       :currentPage.sync="currentPage"
       :total="total"
       :page-sizes="[2, 3, 4, 5]"
-      layout="total, sizes, prev, pager, next, jumper"
+      layout="total, sizes, prev, pager, next, jumper,slot"
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
-    ></gd-pagination>
+    >
+      <div>213213</div>
+    </gd-pagination>
   </div>
 </template>
 <script>

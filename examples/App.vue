@@ -17,7 +17,7 @@ const Card = () => import("./demo/card/index");
 const Mvvm = () => import("./demo/mvvm/index");
 const Tab = () => import("./demo/tab/index");
 const Collapse = () => import("./demo/collapse/index");
-
+const EchartUI = () => import("./demo/echart/index");
 const Alert = () => <gd-alert title="成功提示的文案" type="success"></gd-alert>;
 export default {
   name: "App",
@@ -25,6 +25,7 @@ export default {
   data() {
     return {
       tabNavData: [
+        "echartUI",
         "Pagination",
         "tree",
         "alert",
@@ -33,7 +34,16 @@ export default {
         "tab",
         "mvvm"
       ],
-      tabContentData: [Pagination, Tree, Alert, Card, Collapse, Tab, Mvvm],
+      tabContentData: [
+        EchartUI,
+        Pagination,
+        Tree,
+        Alert,
+        Card,
+        Collapse,
+        Tab,
+        Mvvm
+      ],
       idxs: 0
     };
   },
