@@ -1,0 +1,18 @@
+.gd-tree {
+  ul {
+    margin-left: 15px;
+    padding-left: 0;
+  }
+  &-node {
+  }
+  &-title {
+    position: relative;
+    .gd-icon_updown {
+      position: absolute;
+      left: -12px;
+      top: 9px;
+    }
+    &_text {
+    }
+  }
+}

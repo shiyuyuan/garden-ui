@@ -1,0 +1,20 @@
+.gd-pagination {
+  display: flex;
+  ul {
+    list-style: none;
+    display: flex;
+    /* justify-content: ; */
+  }
+  .active {
+    color: aqua;
+  }
+  &-input {
+    border: 1px solid green;
+    width: 50px;
+  }
+}
+.gd-pager {
+  li {
+    cursor: pointer;
+  }
+}

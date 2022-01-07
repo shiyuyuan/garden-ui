@@ -1,0 +1,17 @@
+.gd-tab {
+ &-nav{
+  display: flex;
+  // justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+ }
+ &-bar{
+  padding: 20px;
+  cursor: pointer;
+  &.is-active{
+    border-bottom: 2px solid orange;
+  }
+}
+&-content{
+  padding: 20px;
+}
+}

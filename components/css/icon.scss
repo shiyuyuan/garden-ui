@@ -1,0 +1,53 @@
+.gd-icon_updown {
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top-color: #b0b0b0;
+  &.is-active {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+.gd-icon {
+  font-style: normal;
+}
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url("./fonts/iconfont.ttf?t=1641432651897") format("truetype");
+}
+
+.gd-icon {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gd-icon-up1:before {
+  content: "\e68e";
+}
+
+.gd-icon-down1:before {
+  content: "\e672";
+}
+
+.gd-icon-back:before {
+  content: "\e691";
+}
+
+.gd-icon-up2:before {
+  content: "\e768";
+}
+
+.gd-icon-down2:before {
+  content: "\e769";
+}
+
+.gd-icon-up3:before {
+  content: "\e610";
+}
+
+.gd-icon-down3:before {
+  content: "\e612";
+}
