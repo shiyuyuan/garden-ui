@@ -5,7 +5,10 @@ import CollapseItem from './collapseItem'
 import Tab from './tab'
 import Tree from './tree'
 import Pagination from './pagination'
+//二次封装 
 import EchartUI from './echartUI'
+import EleTable from '../eleComponents/eleTable'
+import EleTree from '../eleComponents/eleTree'
 const components = {
 	Alert,
 	Card,
@@ -14,7 +17,9 @@ const components = {
 	Tab,
 	Tree,
 	Pagination,
-	EchartUI
+	EchartUI,
+	EleTable,
+	EleTree
 }
 const install = function (Vue) {
 	// 避免重複安裝

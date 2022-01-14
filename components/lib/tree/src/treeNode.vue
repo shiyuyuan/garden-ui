@@ -1,28 +1,42 @@
 <template>
   <ul>
-    <div class="gd-tree-title">
-      <i class="gd-icon_updown" v-if="treeData.children&&treeData.children.length>0"></i>
-      <span class="gd-tree-title_text">{{treeData.title}}</span>
+    <div class="gd-tree-node_content" @click="handleClick">
+      <i
+        class="gd-icon_updown"
+        :class="{'is-active':this.expanded}"
+        v-if="node.children&&node.children.length>0"
+      ></i>
+      <span class="gd-tree-node_label">{{node.text}}</span>
     </div>
-    <gdTreeNode
-      class="gd-tree-node"
-      v-for="(item,index) in treeData.children"
-      :key="index"
-      :treeData="item"
-    >{{item.title}}</gdTreeNode>
+    <div class="gd-tree-node_children" v-show="expanded">
+      <gdTreeNode
+        class="gd-tree-node"
+        v-for="(item,index) in node.children"
+        :key="index"
+        :node="item"
+      >{{item.title}}</gdTreeNode>
+    </div>
   </ul>
 </template>
 <script>
 export default {
   name: "gdTreeNode",
   props: {
-    treeData: {
+    node: {
       type: Object,
       require: true
     }
   },
   data() {
-    return {};
+    return {
+      expanded: false
+    };
+  },
+  methods: {
+    handleClick(node) {
+      this.expanded = !this.expanded;
+      this.$parent.$emit("node-click", this.node);
+    }
   }
 };
 </script>

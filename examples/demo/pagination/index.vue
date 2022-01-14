@@ -17,7 +17,7 @@
       @current-change="handleCurrentChange"
       @size-change="handleSizeChange"
     >
-      <div>213213</div>
+      <!-- <div>213213</div> -->
     </gd-pagination>
   </div>
 </template>

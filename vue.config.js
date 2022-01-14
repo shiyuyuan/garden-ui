@@ -6,5 +6,9 @@ module.exports = {
 			template: 'puclic/index.html',
 			filename: 'index.html'
 		}
-	}
+	},
+	devServer: {
+		open: true
+	},
+	runtimeCompiler: true
 }

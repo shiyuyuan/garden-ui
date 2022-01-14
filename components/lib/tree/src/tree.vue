@@ -1,6 +1,6 @@
 <template>
   <div class="gd-tree">
-    <gd-tree-node :treeData="data" />
+    <gd-tree-node :node="child" v-for="(child,index) in data" :key="index" />
   </div>
 </template>
 <script>
@@ -11,7 +11,7 @@ export default {
     gdTreeNode
   },
   props: {
-    data: Object
+    data: []
   }
 };
 </script>

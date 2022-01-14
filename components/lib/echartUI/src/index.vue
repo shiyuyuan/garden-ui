@@ -5,11 +5,8 @@
 
 <script type="text/babel">
 import * as echarts from "echarts";
-import Line from "./line";
 export default {
-  components: {
-    Line
-  },
+  components: {},
   name: "gd-echart-ui",
   props: {
     option: {
@@ -38,9 +35,3 @@ export default {
   computed: {}
 };
 </script>
-<style scoped>
-.chartContainer {
-  width: 100%;
-  height: 100%;
-}
-</style>>
