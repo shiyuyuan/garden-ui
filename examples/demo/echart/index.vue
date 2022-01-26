@@ -2,13 +2,13 @@
 <template>
   <div class="echartDemo">
     <div class="echartDemo1">
-      <gd-echart-ui :option="option" echartId="echartId1" :className="className" />
+      <gd-echart-ui :option="option" :echartId="'EchartsLine'+clourse()" :className="className" />
     </div>
     <div class="echartDemo2">
-      <gd-echart-ui :option="option" echartId="echartId2" :className="className" />
+      <gd-echart-ui :option="option" :echartId="'EchartsLine'+clourse()" :className="className" />
     </div>
     <div class="echartDemo3">
-      <gd-echart-ui :option="option" echartId="echartId3" :className="className" />
+      <gd-echart-ui :option="option" :echartId="'EchartsLine'+clourse()" :className="className" />
     </div>
   </div>
 </template>
@@ -111,12 +111,28 @@ export default {
             data: [820, 932, 901, 934, 1290, 1330, 1320]
           }
         ]
-      }
+      },
+      echartId: "EchartsLine"
     };
   },
-  mounted() {},
+  mounted() {
+    // console.log(32);
+    // console.log(this.clourse());
+    // // this.echartId = "EchartsLine" + this.clourse();
+    // console.log(this.echartId);
+  },
   computed: {},
-  methods: {}
+  methods: {
+    clourse() {
+      let clourse = function() {
+        var a = 1;
+        return function() {
+          return a++;
+        };
+      };
+      this.clourse = clourse;
+    }
+  }
 };
 </script>
 <style scoped lang="scss">

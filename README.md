@@ -13,9 +13,9 @@ import GardenUI from 'garden-ui'
 Vue.use(GardenUI)
 //按需引入
 import "garden-ui/dist/css/card.css";
-import {Card} from 'garden-ui'
+import {Card,Alert} from 'garden-ui'
 Vue.use(Card)
-
+Vue.use(Alert)
 ```
 #### 3.项目运行
 ```

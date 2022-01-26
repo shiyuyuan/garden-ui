@@ -1,6 +1,6 @@
 {
 	"name": "garden-ui-syy",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "小园子组件库",
 	"main": "dist/index.umd.js",
 	"keywords": [
