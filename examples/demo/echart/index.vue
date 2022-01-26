@@ -131,6 +131,7 @@ export default {
         };
       };
       this.clourse = clourse;
+      console.log(this.clourse);
     }
   }
 };
